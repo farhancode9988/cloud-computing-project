@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo "Installing any build dependencies..."
+  pre_build:
+    commands:
+      - echo "Validating code syntax..."
+  build:
+    commands:
+      - echo "Building assets..."
+artifacts:
+  files:
+    - '**/*'
+  name: static-site-build-artifact
